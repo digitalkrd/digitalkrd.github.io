@@ -20,12 +20,17 @@
         .container {
             text-align: center;
             z-index: 10;
+            overflow: hidden;
+            white-space: nowrap;
+            position: relative;
+            width: 100%;
         }
         .container h1 {
             font-size: 3em;
             margin-bottom: 0.5em;
-            animation: moveText 5s linear infinite;
+            position: absolute;
             color: blue;
+            animation: moveText 5s linear infinite;
         }
         .logo {
             width: 150px;
@@ -34,8 +39,7 @@
         }
         @keyframes moveText {
             0% { transform: translateX(-100%); }
-            50% { transform: translateX(100%); }
-            100% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
     </style>
 </head>
