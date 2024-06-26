@@ -25,6 +25,7 @@
         .container h1 {
             font-size: 3em;
             margin-bottom: 0.5em;
+            animation: moveText 5s linear infinite;
         }
         .background {
             position: absolute;
@@ -40,6 +41,11 @@
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
+        }
+        @keyframes moveText {
+            0% { transform: translateX(-100%); }
+            50% { transform: translateX(100%); }
+            100% { transform: translateX(-100%); }
         }
     </style>
 </head>
