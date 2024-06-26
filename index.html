@@ -23,21 +23,23 @@
             position: relative;
             width: 100%;
         }
-        .moving-text {
-            position: absolute;
-            white-space: nowrap;
-            color: blue;
-            font-size: 3em;
-            animation: moveText 10s linear infinite;
-        }
         .logo {
             width: 150px;
             height: 150px;
             margin-bottom: 20px;
         }
+        .moving-text {
+            position: absolute;
+            white-space: nowrap;
+            color: blue;
+            font-size: 3em;
+            animation: moveText 5s linear forwards;
+            top: 60%; /* Adjust based on your needs */
+            left: -100%;
+        }
         @keyframes moveText {
-            0% { transform: translateX(100%); }
-            100% { transform: translateX(-100vw); }
+            0% { left: -100%; }
+            100% { left: 50%; transform: translateX(-50%); }
         }
     </style>
 </head>
