@@ -1,26 +1,53 @@
-
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coming Soon</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
         body, html {
             margin: 0;
             padding: 0;
             height: 100%;
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             overflow: hidden;
+            background: #000;
         }
-        body {
-            background: url('photo_2024-06-26_15-35-10.jpg') no-repeat center center fixed;
-            background-size: cover;
+        .container {
+            text-align: center;
+            color: white;
+            z-index: 10;
+        }
+        .container h1 {
+            font-size: 3em;
+            margin-bottom: 0.5em;
+        }
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, #1e3c72, #2a5298, #3b5998);
+            background-size: 300% 300%;
+            animation: gradientAnimation 15s ease infinite;
+        }
+        @keyframes gradientAnimation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
     </style>
 </head>
 <body>
+    <div class="background"></div>
+    <div class="container">
+        <h1>Coming Soon</h1>
+        <p>Stay tuned! We are working hard to give you the best experience.</p>
+    </div>
 </body>
 </html>
