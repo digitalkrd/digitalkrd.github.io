@@ -20,17 +20,15 @@
         .container {
             text-align: center;
             z-index: 10;
-            overflow: hidden;
-            white-space: nowrap;
             position: relative;
             width: 100%;
         }
-        .container h1 {
-            font-size: 3em;
-            margin-bottom: 0.5em;
+        .moving-text {
             position: absolute;
+            white-space: nowrap;
             color: blue;
-            animation: moveText 5s linear infinite;
+            font-size: 3em;
+            animation: moveText 10s linear infinite;
         }
         .logo {
             width: 150px;
@@ -39,14 +37,14 @@
         }
         @keyframes moveText {
             0% { transform: translateX(-100%); }
-            100% { transform: translateX(100%); }
+            100% { transform: translateX(100vw); }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <img src="1.jpg" alt="Logo" class="logo">
-        <h1>Coming Soon</h1>
+        <h1 class="moving-text">Digital Matrix Coming Soon</h1>
     </div>
 </body>
 </html>
