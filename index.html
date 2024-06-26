@@ -15,32 +15,22 @@
             justify-content: center;
             align-items: center;
             overflow: hidden;
-            background: #000;
+            background: white;
         }
         .container {
             text-align: center;
-            color: white;
             z-index: 10;
         }
         .container h1 {
             font-size: 3em;
             margin-bottom: 0.5em;
             animation: moveText 5s linear infinite;
+            color: blue;
         }
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(120deg, #1e3c72, #2a5298, #3b5998);
-            background-size: 300% 300%;
-            animation: gradientAnimation 15s ease infinite;
-        }
-        @keyframes gradientAnimation {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        .logo {
+            width: 150px;
+            height: 150px;
+            margin-bottom: 20px;
         }
         @keyframes moveText {
             0% { transform: translateX(-100%); }
@@ -50,10 +40,9 @@
     </style>
 </head>
 <body>
-    <div class="background"></div>
     <div class="container">
+        <img src="1.jpg" alt="Logo" class="logo">
         <h1>Coming Soon</h1>
-        <p>Stay tuned! We are working hard to give you the best experience.</p>
     </div>
 </body>
 </html>
